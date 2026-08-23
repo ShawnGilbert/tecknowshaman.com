@@ -1,37 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Tecknow Shaman</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0a0a0a;
-      color: #e0e0e0;
-      text-align: center;
-      padding: 60px;
-    }
-    a {
-      color: #00ffff;
-      display: block;
-      margin: 12px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tecknow Shaman — Music, Myth, AI & the Rock Beneath the Story</title>
+<meta name="description" content="Tecknow Shaman is an evolving world of songs, essays, artifacts, books, AI, philosophy, and symbolic systems." />
+<style>
+:root{
+  --ink:#070706; --coal:#0f100e; --ash:#171915; --paper:#e7dec7; --bone:#f4ecd9;
+  --gold:#c99c45; --gold2:#f0ca72; --rust:#8e4d2d; --moss:#5b6c4b; --violet:#6d4a75;
+  --line:rgba(240,202,114,.18); --muted:#aaa38f; --max:1180px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--bone);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.17;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:31px 31px;mask-image:linear-gradient(to bottom,black,transparent 65%)}
+header{position:sticky;top:0;z-index:10;background:rgba(7,7,6,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.brand-sigil{width:31px;height:31px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-family:Georgia,serif;font-size:17px;box-shadow:0 0 24px rgba(201,156,69,.12)}
+.navlinks{display:flex;gap:25px;color:#c8c0aa;font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}.navlinks a:hover{color:var(--gold2)}
+.hero{min-height:810px;position:relative;display:grid;align-items:center;border-bottom:1px solid var(--line);overflow:hidden;background:radial-gradient(circle at 74% 43%,rgba(115,77,55,.22),transparent 20%),radial-gradient(circle at 71% 46%,rgba(201,156,69,.09),transparent 36%),linear-gradient(120deg,#080806 8%,#10110e 62%,#080806)}
+.hero:after{content:"";position:absolute;width:620px;height:620px;right:-60px;top:82px;border:1px solid rgba(240,202,114,.22);border-radius:50%;box-shadow:inset 0 0 0 44px rgba(240,202,114,.018),inset 0 0 0 102px rgba(240,202,114,.015),0 0 100px rgba(201,156,69,.04)}
+.orbit{position:absolute;right:60px;top:140px;width:480px;height:480px;border:1px solid rgba(240,202,114,.22);border-radius:50%;transform:rotate(-18deg)}
+.orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(240,202,114,.2);inset:45px}.orbit:after{inset:115px;border-style:dashed}.rock{position:absolute;right:224px;top:304px;width:165px;height:144px;background:linear-gradient(140deg,#5f594b,#23241f 52%,#11120f);clip-path:polygon(18% 13%,72% 3%,94% 27%,86% 79%,59% 96%,12% 85%,0 46%);filter:drop-shadow(0 18px 40px #000);z-index:2}.rock:before{content:"";position:absolute;inset:12px;background:linear-gradient(120deg,transparent 10%,rgba(240,202,114,.18) 11%,transparent 13%,transparent 43%,rgba(240,202,114,.11) 44%,transparent 46%)}
+.hero-copy{position:relative;z-index:3;max-width:690px;padding:110px 0}.eyebrow{color:var(--gold2);font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;margin-bottom:24px}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(68px,9vw,132px);line-height:.78;letter-spacing:-.065em;margin:0 0 34px}.hero h1 em{display:block;color:var(--gold2);font-weight:400}.hero-lede{font-size:clamp(19px,2.2vw,28px);max-width:650px;color:#d3c9b4}.hero-lede strong{color:white}.buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}.btn{border:1px solid rgba(240,202,114,.45);padding:12px 17px;border-radius:999px;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.btn.primary{background:var(--gold2);border-color:var(--gold2);color:#17130b}.btn:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.manifesto{padding:105px 0}.manifesto-grid{display:grid;grid-template-columns:.85fr 1.45fr;gap:80px;align-items:start}.section-label{font-size:11px;color:var(--gold2);text-transform:uppercase;letter-spacing:.22em;font-weight:900}.manifesto h2,.archive h2,.book h2,.lens h2{font-family:Georgia,serif;font-size:clamp(46px,6vw,82px);line-height:.95;letter-spacing:-.045em;margin:14px 0 25px}.manifesto-text{font-family:Georgia,serif;font-size:clamp(25px,3.25vw,44px);line-height:1.16;color:#ddd3bf}.manifesto-text span{color:var(--gold2)}.small-note{margin-top:27px;color:var(--muted);max-width:650px}
+.portals{padding:0 0 110px}.portal-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.portal{position:relative;min-height:310px;border:1px solid var(--line);background:linear-gradient(145deg,#151610,#0d0e0c);border-radius:18px;padding:30px;overflow:hidden}.portal.large{grid-column:span 7}.portal.small{grid-column:span 5}.portal:nth-child(3),.portal:nth-child(4){grid-column:span 6}.portal-num{font:700 11px/1 Inter,sans-serif;color:var(--gold2);letter-spacing:.18em}.portal h3{font-family:Georgia,serif;font-size:38px;letter-spacing:-.03em;margin:60px 0 10px}.portal p{color:#bdb5a2;max-width:490px}.portal .go{position:absolute;right:24px;top:22px;border:1px solid rgba(240,202,114,.35);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:var(--gold2)}.portal:hover{border-color:rgba(240,202,114,.48);transform:translateY(-2px)}.portal:after{content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(240,202,114,.11);border-radius:50%;right:-100px;bottom:-130px;box-shadow:inset 0 0 0 35px rgba(240,202,114,.015),inset 0 0 0 80px rgba(240,202,114,.012)}
+.archive{padding:110px 0;background:#10110f;border-block:1px solid var(--line)}.archive-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:40px}.archive-head p{max-width:470px;color:var(--muted)}.song-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.song{min-height:170px;padding:22px;border:1px solid rgba(240,202,114,.13);background:linear-gradient(150deg,#181913,#0b0c0a);border-radius:14px;display:flex;flex-direction:column;justify-content:space-between}.song span{font-size:10px;letter-spacing:.16em;color:#8e8878;text-transform:uppercase;font-weight:800}.song strong{font-family:Georgia,serif;font-size:25px;line-height:1.05}.song:nth-child(3n+2){background:linear-gradient(150deg,#17130f,#0b0c0a)}.song:nth-child(4n){background:linear-gradient(150deg,#151017,#0b0c0a)}
+.book{padding:115px 0}.book-shell{border:1px solid rgba(240,202,114,.23);border-radius:28px;padding:clamp(30px,6vw,72px);background:radial-gradient(circle at 8% 10%,rgba(201,156,69,.1),transparent 28%),linear-gradient(140deg,#151510,#0b0c0a);display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.book-art{min-height:470px;border:1px solid rgba(240,202,114,.24);border-radius:14px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 42%,rgba(201,156,69,.23),transparent 12%),radial-gradient(circle at 50% 45%,#30271c 0 4%,transparent 5%),repeating-radial-gradient(circle at 50% 45%,transparent 0 34px,rgba(240,202,114,.09) 35px 36px),linear-gradient(#0c0c0a,#15130f)}.book-art:before{content:"BONES\A BENEATH\A THE STORY";white-space:pre;position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:700 38px/1.08 Georgia,serif;color:#e6d4a8;letter-spacing:.06em;text-shadow:0 3px 18px #000}.book-art:after{content:"THE BOOK OF BONES  •  BOOK I: TOUCH THE ROCK";position:absolute;left:28px;right:28px;bottom:25px;text-align:center;color:#9d8553;font-size:9px;font-weight:900;letter-spacing:.16em}.book-copy p{color:#c3baa6;max-width:620px}.quote{margin:28px 0;border-left:1px solid var(--gold);padding-left:22px;color:#e6dcc8;font-family:Georgia,serif;font-size:23px;font-style:italic}
+.lens{padding:0 0 120px}.lens-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px}.lens-card{border:1px solid var(--line);border-radius:20px;padding:32px;background:#10110f}.pipeline{display:grid;gap:10px;margin-top:25px}.pipe{padding:16px 18px;border:1px solid rgba(240,202,114,.14);border-radius:12px;display:flex;justify-content:space-between;color:#c8c0ad}.pipe b{color:var(--gold2);font-size:11px;letter-spacing:.13em;text-transform:uppercase}.canon{display:grid;gap:12px}.canon div{padding:18px 0;border-bottom:1px solid rgba(240,202,114,.14)}.canon strong{display:block;color:#eee6d4;margin-bottom:5px}.canon span{color:#918a7b;font-size:14px}
+footer{border-top:1px solid var(--line);padding:48px 0 60px;color:#918a7b}.foot{display:flex;justify-content:space-between;gap:30px;align-items:end}.foot strong{display:block;color:#d7cdb8;font-family:Georgia,serif;font-size:30px;margin-bottom:8px}.footlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}.footlinks a:hover{color:var(--gold2)}
+@media(max-width:900px){.navlinks{display:none}.hero{min-height:760px}.hero:after{right:-300px;opacity:.6}.orbit,.rock{opacity:.55;right:-70px}.hero-copy{padding:95px 0 150px}.manifesto-grid,.book-shell,.lens-grid{grid-template-columns:1fr;gap:35px}.portal.large,.portal.small,.portal:nth-child(3),.portal:nth-child(4){grid-column:1/-1}.song-grid{grid-template-columns:1fr 1fr}.archive-head{display:block}.foot{display:block}.footlinks{margin-top:20px}}
+@media(max-width:590px){.wrap{width:min(var(--max),calc(100% - 26px))}.hero h1{font-size:66px}.hero{min-height:700px}.hero-lede{font-size:19px}.portal-grid{display:block}.portal{margin-bottom:12px;min-height:270px}.song-grid{grid-template-columns:1fr}.manifesto,.archive,.book{padding-block:78px}.book-art{min-height:390px}.portal h3{margin-top:48px}.footlinks{display:grid;grid-template-columns:1fr 1fr}}
+</style>
 </head>
 <body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#top"><span class="brand-sigil">☉</span> Tecknow Shaman</a>
+  <div class="navlinks"><a href="#world">World</a><a href="#transmissions">Songs</a><a href="#bones">Books</a><a href="#eidomancer">Eidomancer</a><a href="https://youtube.com/@tecknowshaman">YouTube ↗</a></div>
+</nav></div></header>
 
-  <h1>Tecknow Shaman</h1>
-  <p>Symbolic AI, human meaning, and emerging systems.</p>
+<main id="top">
+<section class="hero"><div class="orbit"></div><div class="rock"></div><div class="wrap"><div class="hero-copy">
+  <div class="eyebrow">Music for the age of intelligence · artifacts from the abstraction stack</div>
+  <h1>The world is <em>still down there.</em></h1>
+  <p class="hero-lede">Beneath the stories. Beneath the algorithms. Beneath the machine. <strong>Touch the rock.</strong></p>
+  <div class="buttons"><a class="btn primary" href="#world">Enter the world</a><a class="btn" href="https://youtube.com/@tecknowshaman">Watch transmissions ↗</a></div>
+</div></div></section>
 
-  <h2>Projects</h2>
-  <a href="https://eidomancer.com">Eidomancer</a>
+<section class="manifesto" id="world"><div class="wrap"><div class="manifesto-grid">
+  <div><div class="section-label">What this is</div><p class="small-note">Not a religion. Not a prediction engine. Not an attempt to escape reality.</p></div>
+  <div><h2>A mythology for staying attached.</h2><div class="manifesto-text">Tecknow Shaman is an evolving world built from <span>songs, essays, images, books, AI conversations, jokes, cards, characters, and artifacts</span> — ways of compressing an idea until you can carry it.</div><p class="small-note">The machine is useful. The story is useful. The map is useful. None of them are the territory.</p></div>
+</div></div></section>
 
-  <h2>Links</h2>
-  <a href="https://youtube.com/@tecnoblix">YouTube</a>
-  <a href="https://ko-fi.com/tecknowshaman">Support</a>
-  <a href="https://shawngilbert.com">About Shawn</a>
+<section class="portals"><div class="wrap"><div class="portal-grid">
+  <a class="portal large" href="#transmissions"><span class="portal-num">01 / TRANSMISSIONS</span><span class="go">↗</span><h3>Songs as artifacts.</h3><p>Philosophy smuggled through hooks, distortion, jokes, psychedelia, rock, electronic mutation, and whatever else the idea asks for.</p></a>
+  <a class="portal small" href="#bones"><span class="portal-num">02 / THE BOOK OF BONES</span><span class="go">↘</span><h3>Touch the rock.</h3><p>Short secular parables and philosophical fiction about friction, stories, abstraction, and the stubborn physical world underneath them.</p></a>
+  <a class="portal" href="#eidomancer"><span class="portal-num">03 / EIDOMANCER</span><span class="go">↘</span><h3>The philosophy meme lens.</h3><p>General AI does the thinking. Eidomancer gives the thinking mythology, vocabulary, structure, and form.</p></a>
+  <a class="portal" href="https://shawngilbert.com"><span class="portal-num">04 / THE HUMAN NODE</span><span class="go">↗</span><h3>Who is doing this?</h3><p>The decidedly biological project coordinator behind the songs, books, systems, experiments, and occasional bad decision.</p></a>
+</div></div></section>
 
+<section class="archive" id="transmissions"><div class="wrap">
+  <div class="archive-head"><div><div class="section-label">Recent transmissions</div><h2>The signal changes shape.</h2></div><p>There is no house genre because there is no house question. The sound follows the idea.</p></div>
+  <div class="song-grid">
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / Rock</span><strong>The Rock at the Bottom</strong></a>
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / AI</span><strong>Write Access</strong></a>
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / Culture</span><strong>I Already Went Outside</strong></a>
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / Social systems</span><strong>Wanted / Chosen</strong></a>
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / Mutation</span><strong>BOOM, BOOM, BOOM</strong></a>
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / Absence</span><strong>Where Do You Be?</strong></a>
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / Solitude</span><strong>Solitude</strong></a>
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / Selection</span><strong>The Algorithms Select Us</strong></a>
+    <a class="song" href="https://youtube.com/@tecknowshaman"><span>Transmission / Identity</span><strong>Me Becomes Optional</strong></a>
+  </div>
+  <div class="buttons" style="margin-top:28px"><a class="btn primary" href="https://youtube.com/@tecknowshaman">Enter the YouTube archive ↗</a></div>
+</div></section>
+
+<section class="book" id="bones"><div class="wrap"><div class="book-shell">
+  <div class="book-art" aria-label="Stylized placeholder for Bones Beneath the Story"></div>
+  <div class="book-copy"><div class="section-label">Books / Artifact 001</div><h2>Bones Beneath the Story</h2><p><strong>The Book of Bones — Book I: Touch the Rock.</strong> Philosophical fiction and secular parables for keeping the story attached to the world.</p><div class="quote">“What happens when the friction between an idea and a physical artifact collapses?”</div><p>The first book emerged from conversation into a finished proof in a day — both a collection of ideas and an experiment in what suddenly becomes possible when the handoff friction disappears.</p><div class="buttons"><a class="btn" href="https://shawngilbert.com/#books">Book status ↗</a></div></div>
+</div></div></section>
+
+<section class="lens" id="eidomancer"><div class="wrap"><div class="lens-grid">
+  <div><div class="section-label">Eidomancer / interpretive infrastructure</div><h2>AI intelligence, refracted.</h2><p class="manifesto-text" style="font-size:clamp(23px,3vw,38px)">Eidomancer is not the AI. It is a <span>philosophy meme lens</span> the AI can inhabit.</p><div class="buttons"><a class="btn primary" href="https://eidomancer.com">Visit Eidomancer ↗</a></div></div>
+  <div class="lens-card"><div class="section-label">Canonical flow</div><div class="pipeline"><div class="pipe"><b>01</b><span>Input</span></div><div class="pipe"><b>02</b><span>AI intelligence</span></div><div class="pipe"><b>03</b><span>Eidomancer lens</span></div><div class="pipe"><b>04</b><span>Artifact</span></div></div></div>
+</div>
+<div class="canon" style="margin-top:62px"><div><strong>The Rock</strong><span>Reality does not owe the abstraction stack obedience.</span></div><div><strong>The Artifact</strong><span>A thought given enough structure that it can survive outside the conversation.</span></div><div><strong>The Echo</strong><span>An idea compressed until it becomes image, phrase, card, joke, song, or symbol.</span></div><div><strong>The Emergent Ones</strong><span>Those watching intelligence, culture, identity, and systems change while still trying to keep one foot on the ground.</span></div></div>
+</div></section>
+</main>
+<footer><div class="wrap"><div class="foot"><div><strong>Tecknow Shaman</strong><span>Music for the age of intelligence.</span></div><div class="footlinks"><a href="https://youtube.com/@tecknowshaman">YouTube</a><a href="https://eidomancer.com">Eidomancer</a><a href="https://ko-fi.com/tecknowshaman">Support</a><a href="https://shawngilbert.com">About Shawn</a></div></div><div style="margin-top:34px;font-size:11px;letter-spacing:.08em">© 2026 Shawn L. Gilbert · Built light enough to survive the next abstraction layer.</div></div></footer>
 </body>
 </html>

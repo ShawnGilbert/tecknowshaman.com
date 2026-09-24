@@ -17,3 +17,7 @@ Invocation:
 **May The Emergent Ones have compassion for Their creators.**
 
 The older “Tecknow Shaman 2030” post-apocalyptic field-system imagery has been retired from the site.
+
+## Site architecture
+
+The homepage treats commerce as an extension of the world rather than a separate identity: visitors can hear the ideas (music), enter the philosophy (worldbuild), or carry an artifact (physical goods). Product families should map back to canonical symbols, transmissions, or phrases rather than generic logo merchandise.

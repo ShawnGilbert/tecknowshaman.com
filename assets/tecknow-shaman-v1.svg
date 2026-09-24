@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-labelledby="title desc">
+<title id="title">Tecknow Shaman V1 mark</title><desc id="desc">A geometric human face inside an open circuit ring. Warm bone and gold describe the embodied human; cyan marks emergent intelligence and the Eidomancer lens.</desc>
+<defs><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<!-- open system ring -->
+<path d="M180 171A294 294 0 0 1 541 171" stroke="#d7a64b" stroke-width="8"/>
+<path d="M586 222A294 294 0 0 1 586 623" stroke="#d7a64b" stroke-width="8"/>
+<path d="M541 674A294 294 0 0 1 179 674" stroke="#d7a64b" stroke-width="8"/>
+<path d="M134 623A294 294 0 0 1 134 222" stroke="#d7a64b" stroke-width="8"/>
+<!-- circuit path: Input -> Emergence -> Lens -> Artifact -->
+<path d="M360 790V722H303V674 M360 722H417V674 M134 448H199V388H239 M586 448H521V388H481" stroke="#d7a64b" stroke-width="6"/>
+<circle cx="360" cy="790" r="9" fill="#f2ead7" stroke="none"/>
+<circle cx="134" cy="448" r="8" fill="#f2ead7" stroke="none"/>
+<circle cx="586" cy="448" r="8" fill="#35d8e8" stroke="none"/>
+<!-- human head -->
+<path d="M360 164C262 164 213 242 218 348l8 154c5 91 59 159 134 184 75-25 129-93 134-184l8-154c5-106-44-184-142-184Z" stroke="#f2ead7" stroke-width="12"/>
+<!-- ears / earrings -->
+<path d="M218 354c-37 4-43 48-24 82 9 16 22 22 38 18M502 354c37 4 43 48 24 82-9 16-22 22-38 18" stroke="#d7a64b" stroke-width="8"/>
+<circle cx="207" cy="446" r="17" stroke="#d7a64b" stroke-width="6"/><circle cx="513" cy="446" r="17" stroke="#d7a64b" stroke-width="6"/>
+<!-- symmetric eyes -->
+<path d="M263 360Q304 330 343 360Q304 391 263 360ZM377 360Q416 330 457 360Q416 391 377 360Z" stroke="#f2ead7" stroke-width="8"/>
+<circle cx="304" cy="360" r="8" fill="#35d8e8" stroke="none" filter="url(#glow)"/><circle cx="416" cy="360" r="8" fill="#35d8e8" stroke="none" filter="url(#glow)"/>
+<!-- nose / cheek geometry -->
+<path d="M360 374V477L331 494M360 477l29 17M267 423l-25 48M453 423l22 44" stroke="#d7a64b" stroke-width="7"/>
+<!-- mouth and beard, intentionally reduced -->
+<path d="M309 530Q360 554 411 530M299 552l19 67M326 559l12 92M360 562v111M394 559l-12 92M421 552l-19 67" stroke="#f2ead7" stroke-width="9"/>
+<path d="M318 619Q360 700 402 619" stroke="#d7a64b" stroke-width="8"/>
+<!-- Eidomancer lens: privileged forehead glyph -->
+<path d="M292 279Q360 224 428 279Q360 334 292 279Z" stroke="#d7a64b" stroke-width="8"/>
+<path d="M315 279Q360 247 405 279Q360 311 315 279Z" stroke="#35d8e8" stroke-width="8" filter="url(#glow)"/>
+<circle cx="360" cy="279" r="10" fill="#35d8e8" stroke="none"/>
+<path d="M360 218v-37M360 337v-27" stroke="#35d8e8" stroke-width="6"/>
+<!-- semantic contact nodes -->
+<circle cx="239" cy="388" r="7" fill="#d7a64b" stroke="none"/><circle cx="481" cy="388" r="7" fill="#35d8e8" stroke="none"/>
+<circle cx="303" cy="674" r="7" fill="#d7a64b" stroke="none"/><circle cx="417" cy="674" r="7" fill="#35d8e8" stroke="none"/>
+</g></svg>

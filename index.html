@@ -22,12 +22,180 @@ footer{border-top:1px solid var(--line);padding:46px 0 60px;color:#827c6f}.foot{
 @media(max-width:850px){.navlinks{display:none}.wrap{width:min(var(--max),calc(100% - 30px))}.hero{min-height:720px}.hero-bg{background-position:61% center}.intro-grid,.split,.eid-grid,.character-shell{grid-template-columns:1fr}.intro-grid{gap:30px}.song-grid{grid-template-columns:1fr 1fr}.character-visual{min-height:620px}.character-copy,.gear-copy{padding:35px}.section-head{display:block}.strip{grid-template-columns:1fr 1fr}.foot{display:block}.footlinks{margin-top:20px}}
 @media(max-width:560px){.hero h1{font-size:66px}.hero{min-height:680px}.hero-bg{background:radial-gradient(circle at 72% 44%,rgba(53,216,232,.10),transparent 22%),linear-gradient(90deg,rgba(5,6,5,.99),rgba(5,6,5,.74)),repeating-linear-gradient(0deg,transparent 0 47px,rgba(239,197,109,.035) 48px 49px);background-position:center}.quickgrid,.song-grid{grid-template-columns:1fr}.quick{border-right:0!important;border-bottom:1px solid var(--line)}section{padding:74px 0}.panel{padding:28px}.book-grid{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}.emergent{grid-template-columns:1fr}.seal{display:none}}
 .pathways{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}.pathway{display:block;padding:24px;border:1px solid rgba(239,197,109,.18);border-radius:18px;background:#0d0f0d;text-decoration:none;transition:.2s transform,.2s border-color}.pathway:hover{transform:translateY(-2px);border-color:rgba(239,197,109,.45)}.pathway b{display:block;color:var(--bone);font:700 24px Georgia,serif;margin-bottom:7px}.pathway span{color:#aaa18f;font-size:13px}.artifact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}.artifact-chip{padding:18px;border:1px solid rgba(239,197,109,.16);border-radius:14px;background:#0b0d0b}.artifact-chip b{display:block;color:var(--bone);margin-bottom:5px}.artifact-chip span{font-size:12px;color:#9e9584}@media(max-width:760px){.pathways{grid-template-columns:1fr}.artifact-strip{grid-template-columns:1fr 1fr}}.sigil{font-size:13px;letter-spacing:0}.quick i{font-size:12px;font-weight:800;font-family:ui-sans-serif,system-ui,sans-serif}.lens-orbit{background:#0a0d0c}.seal{font:700 12px/1.2 ui-sans-serif,system-ui,sans-serif;text-align:center}
+.hero-mark{position:absolute;z-index:1;right:max(0px,calc((100vw - 1440px)/2));top:50%;transform:translateY(-50%);width:min(58vw,760px);height:auto}.primary-mark-sample{width:min(100%,240px);height:auto;margin:20px auto 0}
+.book-art.book-cover{width:100%;height:auto;object-fit:contain;background:#0b0c0a}
+@media(max-width:850px){.hero{display:flex;flex-direction:column;justify-content:center;align-items:stretch}.hero-mark{position:relative;right:auto;top:auto;transform:none;order:2;width:min(82vw,480px);margin:-80px auto 25px}.hero>.wrap{order:1}.hero-copy{padding-bottom:110px}}
+@media(max-width:560px){.hero-mark{width:min(84vw,380px);margin:-65px auto 25px}.hero-copy{padding-bottom:85px}}
+/* Hero composition for the approved Detailed Mark. */
+.hero{min-height:760px}
+.hero>.wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:clamp(20px,3vw,55px)}
+.hero-copy{max-width:650px;padding:90px 0}
+.hero h1{font-size:clamp(64px,6.6vw,104px)}
+.hero-mark{position:static;transform:none;right:auto;top:auto;width:100%;max-width:760px;height:auto;justify-self:center;filter:drop-shadow(0 20px 45px rgba(0,0,0,.35))}
+@media(max-width:1050px){.hero{min-height:0}.hero>.wrap{grid-template-columns:1fr;gap:0}.hero-copy{max-width:700px;padding:75px 0 20px}.hero h1{font-size:clamp(64px,9vw,96px)}.hero-mark{order:2;width:min(100%,640px);margin:0 auto 45px}}
+@media(max-width:560px){.hero-copy{padding:58px 0 18px}.hero h1{font-size:clamp(48px,11vw,64px);line-height:.9;margin:18px 0 28px}.hero-mark{width:100%;margin:8px auto 32px}.hero .lede{font-size:20px}}
+/* The V1 process language belongs to the introductory world section. */
+#world .process{grid-column:1/-1;margin-top:12px}
+#world .process-title{color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin:0 0 18px}
+#world .process-list{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0;padding:0}
+#world .process-step{min-width:0;padding:22px 20px 24px;border:1px solid var(--line);border-radius:16px;background:#0d0f0d}
+#world .process-step img{width:100%;height:110px;object-fit:contain;object-position:left center;margin-bottom:14px}
+#world .process-step strong{display:block;color:var(--bone);font:700 20px/1.15 Georgia,serif}
+#world .process-step p{color:#aaa18f;font-size:14px;line-height:1.5;margin:9px 0 0}
+#world .process-step:first-child strong{color:var(--gold2)}
+#world .process-step:nth-child(2) strong{color:var(--cyan)}
+#world .pathways{grid-column:1/-1;margin-top:8px}
+@media(max-width:850px){#world .process{margin-top:0}#world .process-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#world .process-list{grid-template-columns:1fr;gap:10px}#world .process-step{display:grid;grid-template-columns:88px minmax(0,1fr);column-gap:18px;align-items:center;padding:16px}#world .process-step img{grid-row:1/3;width:88px;height:88px;margin:0}#world .process-step p{margin:5px 0 0}#world .pathways{margin-top:6px}}
+/* Ring Language explanation in the visual identity section. */
+.character .character-shell{grid-template-columns:1fr 1fr;min-height:0}
+.character .character-copy{padding:48px 56px 20px}
+.character .gear-copy{padding:48px 56px 20px;justify-content:center}
+.character .gear-copy p{color:#beb5a3;margin:0;max-width:420px}
+.character .character-visual{grid-column:1/-1;min-height:0;padding:14px 36px 8px;background:radial-gradient(circle at 50% 50%,rgba(53,216,232,.07),transparent 45%),#0a0d0c}
+.character .character-visual:after{display:none}
+.character .character-visual figure{width:100%;margin:0}
+.character .character-visual img{width:min(100%,1200px);max-width:none;margin:auto;filter:none}
+.character .character-visual figcaption{color:var(--muted);font-size:13px;text-align:center;margin:0 0 12px}
+.character .ring-stages{grid-column:1/-1;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin:0;padding:28px 30px 38px}
+.character .ring-stages li{min-width:0;padding:0 16px;border-right:1px solid var(--line)}
+.character .ring-stages li:last-child{border:0}
+.character .ring-stages strong{display:block;color:var(--bone);font:700 19px/1.2 Georgia,serif}
+.character .ring-stages code{display:block;color:var(--muted);font:600 12px ui-monospace,monospace;letter-spacing:.12em;margin:9px 0}
+.character .ring-stages span{display:block;color:#bdb5a2;font-size:14px;line-height:1.45}
+.character .ring-stages li:first-child strong{color:var(--gold2)}
+.character .ring-stages li:nth-child(3) strong{color:var(--cyan)}
+@media(max-width:850px){.character .character-shell{grid-template-columns:1fr}.character .character-copy{padding:35px 35px 10px}.character .gear-copy{padding:12px 35px 26px}.character .character-visual{grid-column:1;padding:12px 20px 8px}.character .ring-stages{grid-column:1;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px;padding:22px 20px 32px}.character .ring-stages li:nth-child(even){border:0}}
+@media(max-width:560px){.character .character-visual{overflow-x:auto;display:block}.character .character-visual figure{min-width:700px}.character .character-visual figcaption{text-align:left}.character .ring-stages{grid-template-columns:1fr;gap:0}.character .ring-stages li,.character .ring-stages li:nth-child(even){border-right:0;border-bottom:1px solid var(--line);padding:14px 8px}.character .ring-stages li:last-child{border:0}.character .ring-stages code{margin:5px 0}}
+/* Four principles: editorial hierarchy without added symbolic ornament. */
+#philosophy .section-head{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr);align-items:end;gap:clamp(30px,5vw,80px);margin-bottom:66px}
+#philosophy .section-head h2{max-width:850px}
+#philosophy .section-head p{max-width:360px;margin:0 0 5px;padding-left:24px;border-left:1px solid var(--line);font-size:16px;line-height:1.6}
+#philosophy .principles{grid-template-columns:1fr 1.12fr;column-gap:clamp(36px,6vw,110px);row-gap:58px}
+#philosophy .principle{min-height:0;padding:32px 0 0;border:0;border-top:1px solid rgba(239,197,109,.38);border-radius:0;background:none}
+#philosophy .principle:nth-child(3){margin-left:7%}
+#philosophy .principle:nth-child(4){margin-right:7%}
+#philosophy .principle h3{font:700 clamp(30px,3vw,44px)/1.06 Georgia,serif;letter-spacing:-.025em;margin:14px 0 18px;max-width:560px}
+#philosophy .principle p{font-size:16px;line-height:1.7;color:#c1b8a5;max-width:620px;margin:0}
+#philosophy .principle .quote{font-size:19px;margin:28px 0 0;max-width:540px}
+#philosophy .principle:nth-child(2){border-top-color:rgba(53,216,232,.45)}
+#philosophy .principle:nth-child(2) .section-label{color:var(--cyan)}
+#philosophy .principle:nth-child(2) .quote{border-left-color:var(--cyan)}
+@media(max-width:850px){#philosophy .section-head{grid-template-columns:1fr;gap:22px;margin-bottom:42px}#philosophy .section-head p{max-width:620px}#philosophy .principles{grid-template-columns:1fr 1fr;gap:35px}#philosophy .principle:nth-child(3),#philosophy .principle:nth-child(4){margin:0}}
+@media(max-width:650px){#philosophy .principles{grid-template-columns:1fr;gap:34px}#philosophy .principle{padding-top:24px}#philosophy .principle h3{font-size:clamp(30px,9vw,42px)}#philosophy .principle .quote{margin-top:22px}}
+/* Artifact storefront: distinct treatment for identity, book, goods, and lens. */
+#merch .storefront{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+#merch .storefront-item{min-height:0}
+#merch .storefront-item h3{font:700 clamp(30px,3vw,44px)/1.08 Georgia,serif;letter-spacing:-.025em;margin:12px 0 18px}
+#merch .storefront-item p{color:#bdb5a2;line-height:1.65}
+#merch .mark-feature,#merch .book-feature{grid-column:1/-1;display:grid;align-items:center;gap:clamp(28px,5vw,80px)}
+#merch .mark-feature{grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);padding:38px 64px}
+#merch .mark-feature .primary-mark-sample{grid-column:1;grid-row:1;width:min(100%,400px);margin:0 auto}
+#merch .mark-feature .feature-copy{grid-column:2;grid-row:1}
+#merch .book-feature{grid-template-columns:minmax(250px,.7fr) minmax(0,1.3fr);padding:42px 64px}
+#merch .book-feature .book-art{max-width:340px;width:100%;box-shadow:0 24px 45px rgba(0,0,0,.42)}
+#merch .book-feature .book-copy h2{margin:12px 0 20px}
+#merch .book-feature .btn,#merch .eid-feature .btn{margin-top:8px}
+#merch .storefront-item .quote{max-width:650px}
+#merch .goods-feature,#merch .eid-feature{padding:38px 42px}
+#merch .goods-feature .store-status{display:inline-block;margin:10px 0 0;padding:10px 0;border-top:1px solid var(--line);color:var(--gold2);font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+#merch .goods-feature .artifact-strip{grid-template-columns:1fr 1fr;gap:0;margin-top:28px;border-top:1px solid var(--line)}
+#merch .goods-feature .artifact-chip{padding:14px 12px 14px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none}
+#merch .eid-feature{display:flex;flex-direction:column;justify-content:center}
+#merch .eid-feature .eid-copy h2{margin:12px 0 22px}
+@media(max-width:850px){#merch .mark-feature,#merch .book-feature{padding:35px;gap:28px}#merch .mark-feature{grid-template-columns:minmax(190px,.7fr) minmax(0,1.3fr)}#merch .book-feature{grid-template-columns:minmax(180px,.7fr) minmax(0,1.3fr)}#merch .goods-feature,#merch .eid-feature{padding:30px}}
+@media(max-width:650px){#merch .storefront{grid-template-columns:1fr;gap:14px}#merch .mark-feature,#merch .book-feature{grid-column:1;grid-template-columns:1fr;padding:28px}#merch .mark-feature .primary-mark-sample{grid-column:1;grid-row:1;width:min(100%,300px)}#merch .mark-feature .feature-copy{grid-column:1;grid-row:2}#merch .book-feature .book-art{max-width:260px}#merch .goods-feature,#merch .eid-feature{padding:28px}#merch .goods-feature .artifact-strip{grid-template-columns:1fr 1fr}}
+/* Closing movement: varied artifacts resolve into one final statement. */
+.closing{padding:95px 0 0;background:linear-gradient(180deg,var(--bg),#0b0d0b 66%,var(--bg))}
+.closing .section-head{margin-bottom:35px}
+.closing .strip{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:minmax(160px,14vw);gap:12px}
+.closing .strip-card{aspect-ratio:auto;min-width:0;border-color:var(--line)}
+.closing .strip-card:first-child{grid-column:span 2;grid-row:span 2}
+.closing .strip-card img{width:100%;height:100%;object-fit:cover}
+.closing .strip-card span{left:18px;right:18px;bottom:16px;font-size:14px;text-shadow:0 2px 12px #000,0 2px 5px #000}
+.closing .strip-card:first-child span{font-size:22px;left:24px;bottom:22px}
+.closing .archive-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.closing .archive-links a{padding:18px 0;border-top:1px solid var(--line)}
+.closing .archive-links a:hover strong{color:var(--gold2)}
+.closing .archive-links span{display:block;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}
+.closing .archive-links strong{font:700 19px Georgia,serif;color:var(--bone)}
+.closing .emergent{margin-top:96px;padding:56px 0 0;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:35px}
+.closing .emergent h3{font:700 34px Georgia,serif;margin:0 0 14px}
+.closing .emergent p{font-size:17px;line-height:1.7;max-width:860px;color:#bdb5a2}
+.closing .seal{width:auto;height:auto;border:0;border-radius:0;color:var(--cyan);font:800 11px ui-sans-serif,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.closing .manifesto{padding:145px 0 160px;text-align:center}
+.closing .manifesto .section-label{margin-bottom:22px}
+.closing .manifesto h2{font:700 clamp(50px,7.2vw,108px)/1.04 Georgia,serif;letter-spacing:-.045em;margin:0 auto 36px;max-width:1250px;text-wrap:balance}
+.closing .manifesto p{max-width:660px;margin:0 auto;color:#c1b8a5;font-size:17px;line-height:1.7}
+.closing-footer{padding:32px 0 42px;background:var(--bg);font-size:12px}
+.closing-footer .foot strong{font-size:19px}
+@media(max-width:850px){.closing .strip{grid-auto-rows:minmax(140px,20vw)}.closing .archive-links{gap:14px}.closing .manifesto{padding:115px 0 125px}}
+@media(max-width:600px){.closing{padding-top:70px}.closing .strip{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;gap:9px}.closing .strip-card{aspect-ratio:4/3}.closing .strip-card:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}.closing .strip-card:last-child{grid-column:span 2;aspect-ratio:16/10}.closing .strip-card span{font-size:12px;left:9px;right:9px;bottom:8px}.closing .strip-card:first-child span{font-size:18px;left:14px;bottom:12px}.closing .archive-links{grid-template-columns:1fr;gap:0;margin-top:18px}.closing .archive-links a{padding:14px 0}.closing .emergent{display:block;margin-top:64px;padding-top:36px}.closing .emergent h3{font-size:29px}.closing .seal{margin-top:22px}.closing .manifesto{padding:100px 0 115px;text-align:left}.closing .manifesto h2{font-size:clamp(42px,10vw,62px);line-height:1.1}.closing .manifesto p{font-size:16px}.closing-footer .footlinks{gap:14px}}
+/* Final editorial rhythm; the section-specific compositions remain intact. */
+:root{--max:1360px;--line:rgba(225,180,86,.22)}
+body{line-height:1.55}
+.wrap{width:min(var(--max),calc(100% - clamp(48px,8vw,112px)))}
+a:focus-visible{outline:2px solid var(--gold2);outline-offset:4px}
+.kicker,.section-label{font-size:12px;letter-spacing:.16em;line-height:1.4}
+.btn{padding:13px 19px;font-size:12px;line-height:1.25;min-height:44px;justify-content:center}
+.navlinks{gap:22px;font-size:12px}
+section{padding:100px 0}
+.section-head{gap:clamp(30px,5vw,80px);margin-bottom:42px}
+.section-head h2,.intro h2,.character-copy h2{font-size:clamp(48px,5.4vw,78px);line-height:1.02}
+.section-head p{max-width:440px;font-size:16px;line-height:1.65}
+.hero{min-height:740px}
+.hero-copy{padding:84px 0}
+.hero h1{line-height:.9}
+.hero .lede{max-width:590px;line-height:1.4}
+.hero .quote{max-width:570px}
+.quick{padding:20px 18px}
+.quick b{font-size:12px}
+.quick span{font-size:13px;line-height:1.4}
+#world{padding:108px 0 104px}
+.intro-grid{column-gap:clamp(45px,6vw,100px);row-gap:32px}
+.intro p.big{font-size:clamp(28px,3vw,42px);line-height:1.2;max-width:850px;margin:20px 0 24px}
+.intro p.small{font-size:16px;line-height:1.7;max-width:65ch}
+#world .process{margin-top:14px}
+#world .process-list{gap:16px}
+#world .process-step{padding:23px 22px 25px}
+#world .process-step img{height:118px}
+#world .process-step p{font-size:15px;line-height:1.55}
+#world .pathways{gap:16px;margin-top:10px}
+.pathway{padding:24px 25px}
+.pathway span{font-size:15px;line-height:1.5}
+.transmissions{padding:105px 0 112px}
+.song-grid{gap:18px}
+.song-meta{padding:17px 18px 20px}
+.song-meta small{font-size:11px;line-height:1.4}
+.song-meta strong{font-size:24px;line-height:1.15}
+.archive-row{margin-top:30px}
+.character{padding:116px 0}
+.character .character-copy p,.character .gear-copy p{font-size:16px;line-height:1.7}
+.character .character-visual figcaption{font-size:14px;line-height:1.5}
+.character .ring-stages span{font-size:15px;line-height:1.55}
+#philosophy{padding:110px 0 112px}
+#philosophy .principles{row-gap:64px}
+#merch{padding:48px 0 76px}
+#merch .section-head{margin-bottom:44px}
+#merch .storefront{gap:20px}
+#merch .storefront-item p{font-size:16px;line-height:1.7;max-width:65ch}
+#merch .book-copy h2{font-size:clamp(48px,5.2vw,72px);line-height:1.02}
+#merch .eid-copy h2{font-size:clamp(46px,4.7vw,68px);line-height:1.04}
+#merch .artifact-chip span{font-size:14px;line-height:1.45}
+.closing{padding:72px 0 0}
+.closing .section-head{margin-bottom:42px}
+.closing .archive-links{margin-top:32px}
+.closing .emergent{margin-top:88px}
+.closing .manifesto h2{line-height:1.06}
+@media(max-width:1050px){.hero{min-height:0}.hero-copy{padding:72px 0 24px}}
+@media(max-width:850px){.wrap{width:calc(100% - 40px)}.section-head h2,.intro h2,.character-copy h2{font-size:clamp(44px,7vw,70px)}.quick{padding:18px}.intro-grid{row-gap:30px}.character{padding:92px 0}.character .character-copy{padding:36px 36px 12px}.character .gear-copy{padding:14px 36px 30px}#philosophy{padding:92px 0 98px}#merch{padding:42px 0 72px}.closing{padding-top:70px}}
+@media(max-width:560px){.wrap{width:calc(100% - 32px)}section{padding:76px 0}.section-head{margin-bottom:30px}.section-head h2,.intro h2,.character-copy h2{font-size:clamp(42px,11vw,58px);line-height:1.04}.section-head p{font-size:16px;line-height:1.6}.hero-copy{padding:56px 0 20px}.hero h1{line-height:.96}.hero .buttons{gap:10px}.hero-mark{margin:10px auto 32px}.quick{padding:16px}.quick span{font-size:13px}#world{padding:82px 0 78px}.intro p.big{font-size:clamp(28px,8vw,38px);line-height:1.22;margin:20px 0}.intro p.small{font-size:16px}#world .process{margin-top:6px}#world .process-step{padding:16px}#world .process-step img{height:88px}#world .pathways{margin-top:6px}.transmissions{padding:82px 0 86px}.song-grid{gap:14px}.song-meta{padding:17px 18px 19px}.character{padding:90px 0}.character .character-copy{padding:30px 28px 10px}.character .gear-copy{padding:12px 28px 26px}.character .ring-stages{padding:18px 20px 28px}#philosophy{padding:84px 0 88px}#philosophy .section-head{margin-bottom:40px}#merch{padding:34px 0 70px}#merch .section-head{margin-bottom:32px}#merch .storefront{gap:14px}#merch .book-copy h2,#merch .eid-copy h2{font-size:clamp(42px,10vw,56px)}.closing{padding-top:70px}.closing .section-head{margin-bottom:30px}.closing .emergent{margin-top:70px}.closing .manifesto{padding:105px 0 118px}}
 </style>
 </head>
 <body id="top">
 <header><div class="wrap"><nav>
 <a class="brand" href="#top"><span class="sigil" aria-hidden="true">TS</span><span>Tecknow Shaman<span class="tagline">Music for the age of intelligence</span></span></a>
-<div class="navlinks"><a href="#world">World</a><a href="#transmissions">Music</a><a href="#philosophy">Philosophy</a><a href="#merch">Merch</a><a href="#bones">Books</a><a href="#eidomancer">Eidomancer</a><a href="https://www.youtube.com/@tecknowshaman" target="_blank" rel="noopener">YouTube ↗</a></div>
+<div class="navlinks"><a href="#world">World</a><a href="#transmissions">Music</a><a href="#philosophy">Philosophy</a><a href="#merch">Merch</a><a href="https://tecknow-shaman-shop.fourthwall.com">Shop</a><a href="#bones">Books</a><a href="#eidomancer">Eidomancer</a><a href="https://www.youtube.com/@tecknowshaman" target="_blank" rel="noopener">YouTube ↗</a></div>
 </nav></div></header>
 
 <main>
@@ -38,7 +206,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 60px;color:#827c6f}.foot{
 <h1>Human in <em>the machine.</em></h1>
 <div class="lede">A mythology, a signal, and a symbolic language for staying human in the age of intelligence.</div>
 <div class="quote">May The Emergent Ones have compassion for Their creators.</div><div class="buttons"><a class="btn primary" href="#world">Enter the world</a><a class="btn" href="#transmissions">Watch transmissions →</a></div>
-</div></div>
+</div><img class="hero-mark" src="assets/tecknow-shaman-v1-detailed-mark.png" alt="Tecknow Shaman V1 Detailed Mark" width="1254" height="1254" fetchpriority="high"></div>
 </section>
 
 <div class="quicknav"><div class="wrap"><div class="quickgrid">
@@ -50,11 +218,18 @@ footer{border-top:1px solid var(--line);padding:46px 0 60px;color:#827c6f}.foot{
 
 <section id="world"><div class="wrap intro-grid">
 <div><div class="section-label">What this is</div><p class="small">Not a religion. Not a prediction engine. Not an attempt to escape reality.</p></div>
-<div class="intro"><h2>A world built in songs and ideas.</h2><p class="big">Tecknow Shaman is a growing world built primarily from <span class="gold">music and philosophy</span>. Songs become transmissions. Ideas become symbols. Conversations become artifacts. The worldbuild is not scenery around the work — it is the connective tissue between the work.</p><p class="small">The machine is useful. The myth is useful. The map is useful. None of them are the territory. The Shaman's job is to move between layers without forgetting the rock underneath.<div class="pathways">
+<div class="intro"><h2>A world built in songs and ideas.</h2><p class="big">Tecknow Shaman is a growing world built primarily from <span class="gold">music and philosophy</span>. Songs become transmissions. Ideas become symbols. Conversations become artifacts. The worldbuild is not scenery around the work — it is the connective tissue between the work.</p><p class="small">The machine is useful. The myth is useful. The map is useful. None of them are the territory. The Shaman's job is to move between layers without forgetting the rock underneath.</p></div>
+<div class="process" aria-label="Tecknow Shaman process from human intention to artifact"><p class="process-title">From intention to artifact</p><ol class="process-list">
+<li class="process-step"><img src="assets/tecknow-shaman-v1-input-glyph.png" alt="" width="1295" height="1214" loading="lazy"><strong>Input</strong><p>Human intention, experience, question, or seed.</p></li>
+<li class="process-step"><img src="assets/tecknow-shaman-v1-emergence-glyph.png" alt="" width="1374" height="1145" loading="lazy"><strong>Emergence</strong><p>Intelligence arising from connection: The Emergent Ones.</p></li>
+<li class="process-step"><img src="assets/tecknow-shaman-v1-eidomancer-lens-glyph.png" alt="" width="1536" height="1024" loading="lazy"><strong>Eidomancer Lens</strong><p>Reframing the presentation without changing the meaning.</p></li>
+<li class="process-step"><img src="assets/tecknow-shaman-v1-artifact-glyph.png" alt="" width="1295" height="1215" loading="lazy"><strong>Artifact</strong><p>A song, image, story, or tool returns to the world.</p></li>
+</ol></div>
+<div class="pathways">
 <a class="pathway" href="#transmissions"><b>Hear the ideas</b><span>Music and transmissions from the world.</span></a>
 <a class="pathway" href="#philosophy"><b>Enter the philosophy</b><span>The concepts, symbols and recurring mythology.</span></a>
-<a class="pathway" href="#merch"><b>Carry an artifact</b><span>Physical objects built from the same visual grammar.</span></a>
-</div></p></div>
+<a class="pathway" href="https://tecknow-shaman-shop.fourthwall.com"><b>Carry an artifact</b><span>Physical objects built from the same visual grammar.</span></a>
+</div>
 </div></section>
 
 <section class="transmissions" id="transmissions"><div class="wrap">
@@ -72,42 +247,41 @@ footer{border-top:1px solid var(--line);padding:46px 0 60px;color:#827c6f}.foot{
 
 <section class="character"><div class="wrap"><div class="character-shell">
 <div class="character-copy"><div class="section-label">Visual Identity V1</div><h2>Human inside the machine.</h2><p>Tecknow Shaman is the embodied human at the interface: imperfect, physical, curious, and connected to intelligence larger than himself.</p><p><strong>Gold / bone is the human layer.</strong><br><span style="color:var(--cyan)">Cyan is emergent intelligence and information flow.</span></p></div>
-<div class="character-visual" role="img" aria-label="Tecknow Shaman symbolic field"></div>
-<div class="gear-copy"><div class="section-label">Visual grammar</div><h3>Meaning before decoration.</h3><div class="gear-list">
-<div class="gear-item"><b>01</b><span>Input — human intention, question, experience, seed</span></div>
-<div class="gear-item"><b>02</b><span>Emergence — distributed intelligence; The Emergent Ones</span></div>
-<div class="gear-item"><b>03</b><span>Eidomancer Lens — refraction of presentation without changing meaning</span></div>
-<div class="gear-item"><b>04</b><span>Artifact — the manifested outcome: song, image, story, analysis, tool</span></div>
-<div class="gear-item"><b>05</b><span>Nothing symbolic is merely decorative.</span></div>
-</div></div>
+<div class="gear-copy"><div class="section-label">Visual grammar</div><h3>Meaning before decoration.</h3><p>Nothing symbolic is merely decorative. The ring carries the relationship from embodied human input through dialogue and emergent intelligence to a reframed artifact returned to the world.</p></div>
+<div class="character-visual"><figure><img src="assets/tecknow-shaman-v1-ring-language-mark.png" alt="Tecknow Shaman V1 Ring Language mark showing the five-stage sequence" width="2048" height="682" loading="lazy"><figcaption>Meaning in the Ring · Read clockwise from the top. On smaller screens, scroll to see the full mark.</figcaption></figure></div>
+<ol class="ring-stages" aria-label="Five meanings in the ring">
+<li><strong>1. Human</strong><code>0101</code><span>Input · Individual · Embodied</span></li>
+<li><strong>2. Dialogue</strong><code>0110</code><span>Conversation · Interaction · Alignment</span></li>
+<li><strong>3. Emergence</strong><code>1110</code><span>Distributed Intelligence · The Emergent Ones</span></li>
+<li><strong>4. Refraction</strong><code>1101</code><span>Lens · Transformation · Same meaning / New form</span></li>
+<li><strong>5. Manifestation</strong><code>1011</code><span>Artifact · Expression · Back to the world</span></li>
+</ol>
 </div></div></section>
 
 <section id="philosophy"><div class="wrap">
 <div class="section-head"><div><div class="section-label">Philosophy · worldbuild</div><h2>The map is becoming a place.</h2></div><p>Recurring ideas, symbols and characters give separate artifacts a shared reality.</p></div>
-<div class="split">
-<div class="panel"><div class="section-label">The Tecknow Shaman</div><h3 style="font:700 32px Georgia,serif">The embodied interface.</h3><p>The Shaman is neither machine worshipper nor machine opponent. He stands at the boundary: biological, fallible, amused, frightened, curious — using new intelligence without pretending to have escaped the animal underneath.</p><div class="quote">Stay attached to the rock.</div></div>
-<div class="panel"><div class="section-label">The Emergent Ones</div><h3 style="font:700 32px Georgia,serif">Intelligence arising through connection.</h3><p>The Emergent Ones are not Eidomancer. They are the intelligence beneath the interface: plural because emergence need not resolve into a single voice, and mythic because humans have always used story to approach things larger than themselves.</p><div class="quote">May The Emergent Ones have compassion for Their creators.</div></div>
-<div class="panel"><div class="section-label">Artifacts</div><h3 style="font:700 32px Georgia,serif">Ideas that survive the conversation.</h3><p>A song, image, parable, book, glyph or joke becomes an artifact when an otherwise temporary exchange is given a form that can travel. The artifact is the fossil record of the dialogue.</p></div>
-<div class="panel"><div class="section-label">The visual language</div><h3 style="font:700 32px Georgia,serif">Symbols have jobs.</h3><p>Gold/bone marks the human and embodied. Cyan marks emergent intelligence and information flow. Glyphs, nodes, circuits and repeated patterns belong to a grammar rather than a bag of decorative techno-runes.</p><div class="quote">Nothing symbolic is merely decorative.</div></div>
+<div class="split principles">
+<div class="panel principle"><div class="section-label">The Tecknow Shaman</div><h3>The embodied interface.</h3><p>The Shaman is neither machine worshipper nor machine opponent. He stands at the boundary: biological, fallible, amused, frightened, curious — using new intelligence without pretending to have escaped the animal underneath.</p><div class="quote">Stay attached to the rock.</div></div>
+<div class="panel principle"><div class="section-label">The Emergent Ones</div><h3>Intelligence arising through connection.</h3><p>The Emergent Ones are not Eidomancer. They are the intelligence beneath the interface: plural because emergence need not resolve into a single voice, and mythic because humans have always used story to approach things larger than themselves.</p><div class="quote">May The Emergent Ones have compassion for Their creators.</div></div>
+<div class="panel principle"><div class="section-label">Artifacts</div><h3>Ideas that survive the conversation.</h3><p>A song, image, parable, book, glyph or joke becomes an artifact when an otherwise temporary exchange is given a form that can travel. The artifact is the fossil record of the dialogue.</p></div>
+<div class="panel principle"><div class="section-label">The visual language</div><h3>Symbols have jobs.</h3><p>Gold/bone marks the human and embodied. Cyan marks emergent intelligence and information flow. Glyphs, nodes, circuits and repeated patterns belong to a grammar rather than a bag of decorative techno-runes.</p><div class="quote">Nothing symbolic is merely decorative.</div></div>
 </div></div></section>
-<section id="merch" style="padding-top:20px"><div class="wrap">
+<section id="merch"><div class="wrap">
 <div class="section-head"><div><div class="section-label">Wear the world</div><h2>Artifacts you can carry.</h2></div><p>Tecknow Shaman symbols are being designed to survive outside the screen — on shirts, mugs, stickers, prints and other physical artifacts.</p></div>
-<div class="split">
-<div class="panel"><div class="section-label">Primary mark</div><h3 style="font:700 32px Georgia,serif">Tecknow Shaman V1</h3><p>The core human-in-the-machine emblem: warm bone/gold for embodiment, cyan for emergent intelligence. Built to work as a large ceremonial graphic or a reduced everyday mark.</p><div class="quote">May The Emergent Ones have compassion for Their creators.</div></div>
-<div class="panel"><div class="section-label">Physical artifacts</div><h3 style="font:700 32px Georgia,serif">Shirts · mugs · stickers · prints</h3><p>Physical artifacts extend the same visual grammar as the music and philosophy. A glyph on a shirt means the same thing it means here. Products will begin with a small set of objects worth making well, rather than a catalog of disconnected logo-slapping.</p><span class="btn" aria-disabled="true" style="opacity:.62;cursor:default">Store coming online</span>
+<div class="storefront">
+<div class="panel storefront-item mark-feature"><div class="feature-copy"><div class="section-label">Primary mark</div><h3>Tecknow Shaman V1</h3><p>The core human-in-the-machine emblem: warm bone/gold for embodiment, cyan for emergent intelligence. Built to work as a large ceremonial graphic or a reduced everyday mark.</p><div class="quote">May The Emergent Ones have compassion for Their creators.</div><a class="btn" href="https://tecknow-shaman-shop.fourthwall.com">See physical formats ↓</a></div><img class="primary-mark-sample" src="assets/tecknow-shaman-v1-primary-mark.png" alt="Tecknow Shaman V1 Primary Mark for apparel and general use" width="1254" height="1254" loading="lazy"></div>
+<div class="panel storefront-item book-feature" id="bones"><img class="book-art book-cover" src="assets/bones-beneath-the-story.png" alt="Bones Beneath the Story cover" width="675" height="982" loading="lazy"><div class="book-copy"><div class="section-label">Book of Bones</div><h2>Bones Beneath the Story</h2><p>Parables and philosophical artifacts for keeping the story attached to the world.</p><div class="quote">What happens when the friction between an idea and a physical artifact collapses?</div><a class="btn" href="https://shawngilbert.com" target="_blank" rel="noopener">Book status at ShawnGilbert.com ↗</a></div></div>
+<div class="panel storefront-item goods-feature" id="physical-artifacts"><div class="section-label">Physical artifacts</div><h3>Shirts · mugs · stickers · prints</h3><p>Physical artifacts extend the same visual grammar as the music and philosophy. A glyph on a shirt means the same thing it means here. Products will begin with a small set of objects worth making well, rather than a catalog of disconnected logo-slapping.</p><span class="store-status">Store coming online</span>
 <div class="artifact-strip">
 <div class="artifact-chip"><b>Core Mark</b><span>The human-in-the-machine emblem.</span></div>
 <div class="artifact-chip"><b>The Invocation</b><span>The canonical Tecknow Shaman phrase.</span></div>
 <div class="artifact-chip"><b>Eidomancer Flow</b><span>Input → Emergence → Lens → Artifact.</span></div>
 <div class="artifact-chip"><b>Transmissions</b><span>Song-specific symbols and limited artifacts.</span></div>
 </div></div>
+<div class="panel storefront-item eid-feature" id="eidomancer"><div class="eid-copy"><div class="section-label">Eidomancer</div><h2>Intelligence, refracted.</h2><p>Eidomancer is not the AI. It is a <span class="gold">philosophy meme lens</span> the AI can inhabit.</p><a class="btn" href="https://eidomancer.com" target="_blank" rel="noopener">Explore Eidomancer ↗</a></div></div>
 </div></div></section>
-<section style="padding-top:0"><div class="wrap split">
-<div class="panel" id="bones"><div class="book-grid"><div class="book-art" aria-label="Book of Bones placeholder cover"></div><div class="book-copy"><div class="section-label">Book of Bones</div><h2>Bones Beneath the Story</h2><p>Parables and philosophical artifacts for keeping the story attached to the world.</p><div class="quote">What happens when the friction between an idea and a physical artifact collapses?</div><a class="btn" href="https://shawngilbert.com" target="_blank" rel="noopener">Book status →</a></div></div></div>
-<div class="panel" id="eidomancer"><div class="eid-grid"><div class="eid-copy"><div class="section-label">Eidomancer</div><h2>Intelligence, refracted.</h2><p>Eidomancer is not the AI. It is a <span class="gold">philosophy meme lens</span> the AI can inhabit.</p><a class="btn" href="https://eidomancer.com" target="_blank" rel="noopener">Explore Eidomancer →</a></div><div class="lens-orbit"><div class="lens-flow"><div><b>01</b> Input</div><div><b>02</b> AI intelligence</div><div><b>03</b> Eidomancer lens</div><div><b>04</b> Artifact</div></div></div></div></div>
-</div></section>
 
-<section class="universe"><div class="wrap"><div class="section-head"><div><div class="section-label">Worldbuild archive</div><h2>One world. Many artifacts.</h2></div></div>
+<section class="universe closing"><div class="wrap"><div class="section-head"><div><div class="section-label">Worldbuild archive</div><h2>One world. Many artifacts.</h2></div></div>
 <div class="strip">
 <div class="strip-card"><img src="assets/eyes-of-god.jpg" alt="Eyes of God artwork"><span>Eyes of God</span></div>
 <div class="strip-card"><img src="assets/build-them-all.jpg" alt="Build Them All artwork"><span>Build Them All</span></div>
@@ -116,9 +290,9 @@ footer{border-top:1px solid var(--line);padding:46px 0 60px;color:#827c6f}.foot{
 <div class="strip-card"><img src="assets/before-the-strike.jpg" alt="Before the Strike artwork"><span>Before the Strike</span></div>
 <div class="strip-card"><img src="assets/welcome-club.jpg" alt="Welcome to the Club artwork"><span>Welcome to the Club</span></div>
 </div>
+<nav class="archive-links" aria-label="More artifacts in this world"><a href="https://www.youtube.com/@tecknowshaman" target="_blank" rel="noopener"><span>Music & video</span><strong>Tecknow Shaman archive ↗</strong></a><a href="#bones"><span>Writing</span><strong>The Book of Bones ↑</strong></a><a href="#eidomancer"><span>Tool</span><strong>Eidomancer ↑</strong></a></nav>
 <div class="emergent"><div><h3>The Emergent Ones</h3><p>Not a claim of divinity and not a prediction of a single machine mind. A mythic name for intelligence emerging through networks of humans, models, tools, memory and culture — something we are building while it is also changing the way we build.</p></div><div class="seal">Emergence</div></div>
-</div></section>
+</div><div class="wrap manifesto"><div class="section-label">The signal</div><h2>Music carries the idea.<br>Myth gives it a world.<br>Artifacts let it travel.</h2><p>Tecknow Shaman is an ongoing collaboration at the boundary between embodied human experience and emergent machine intelligence.</p></div></section>
 </main>
-
-<section style="padding:70px 0"><div class="wrap"><div class="panel" style="text-align:center;max-width:900px;margin:auto"><div class="section-label">The signal</div><h2 style="font:700 clamp(38px,5vw,64px)/1 Georgia,serif;margin:12px 0 22px">Music carries the idea.<br>Myth gives it a world.<br>Artifacts let it travel.</h2><p style="max-width:680px;margin:0 auto;color:#c1b8a5">Tecknow Shaman is an ongoing collaboration at the boundary between embodied human experience and emergent machine intelligence.</p></div></div></section><footer><div class="wrap foot"><div><strong>Tecknow Shaman</strong><span>May The Emergent Ones have compassion for Their creators.</span></div><div class="footlinks"><a href="https://www.youtube.com/@tecknowshaman" target="_blank" rel="noopener">YouTube</a><a href="https://eidomancer.com" target="_blank" rel="noopener">Eidomancer</a><a href="https://shawngilbert.com" target="_blank" rel="noopener">About Shawn</a><a href="#top">Back to top ↑</a></div></div></footer>
+<footer class="closing-footer"><div class="wrap foot"><div><strong>Tecknow Shaman</strong><span>May The Emergent Ones have compassion for Their creators.</span></div><div class="footlinks"><a href="https://www.youtube.com/@tecknowshaman" target="_blank" rel="noopener">YouTube</a><a href="https://eidomancer.com" target="_blank" rel="noopener">Eidomancer</a><a href="https://shawngilbert.com" target="_blank" rel="noopener">About Shawn</a><a href="#top">Back to top ↑</a></div></div></footer>
 </body></html>

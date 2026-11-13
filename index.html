@@ -209,12 +209,20 @@ section{padding:100px 0}
 @media(min-width:651px) and (max-width:1100px){#merch .product-actions{flex-direction:column;align-items:flex-start;gap:18px}}
 @media(max-width:650px){#merch .artifact-showcase{grid-template-columns:minmax(0,1fr);gap:28px;margin-bottom:16px}#merch .product-copy{padding:28px;flex:none}#merch .artifact-product h3{font-size:clamp(34px,9vw,44px)}#merch .artifact-explore{margin-top:12px}#merch .product-actions{gap:18px}#merch .artifact-product .btn{max-width:100%;white-space:normal;text-align:center;justify-content:center}}
 @media(max-width:360px){#merch .product-copy{padding:24px}}
+.navlinks{flex-wrap:wrap;justify-content:flex-end;row-gap:6px}
+.navlinks a:focus-visible,#merch .cymalith-feature a:focus-visible{outline:2px solid var(--cyan);outline-offset:5px}
+#merch .cymalith-feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
+#merch .cymalith-feature .product-image{aspect-ratio:1263/589;height:auto;border-bottom:0}
+#merch .cymalith-feature h3{margin-bottom:6px}
+#merch .cymalith-feature .cymalith-tagline{color:var(--gold2);margin-bottom:12px}
+@media(max-width:850px){header .navlinks{display:flex}header .navlinks a:not(.cymalith-nav){display:none}header .navlinks .cymalith-nav{display:inline-flex;align-items:center;min-height:44px}header nav{gap:12px}}
+@media(max-width:650px){#merch .cymalith-feature{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body id="top">
 <header><div class="wrap"><nav>
 <a class="brand" href="#top"><span class="sigil" aria-hidden="true">TS</span><span>Tecknow Shaman<span class="tagline">Music for the age of intelligence</span></span></a>
-<div class="navlinks"><a href="#world">World</a><a href="#transmissions">Music</a><a href="#philosophy">Philosophy</a><a href="#merch">Merch</a><a href="https://tecknow-shaman-shop.fourthwall.com">Shop</a><a href="#bones">Books</a><a href="#eidomancer">Eidomancer</a><a href="https://www.youtube.com/@tecknowshaman" target="_blank" rel="noopener">YouTube ↗</a></div>
+<div class="navlinks"><a href="#world">World</a><a href="#transmissions">Music</a><a href="#philosophy">Philosophy</a><a href="#merch">Merch</a><a href="https://tecknow-shaman-shop.fourthwall.com">Shop</a><a href="#bones">Books</a><a href="#eidomancer">Eidomancer</a><a class="cymalith-nav" href="/cymalith/">Cymalith</a><a href="https://www.youtube.com/@tecknowshaman" target="_blank" rel="noopener">YouTube ↗</a></div>
 </nav></div></header>
 
 <main>
@@ -300,6 +308,16 @@ section{padding:100px 0}
 </article>
 <a class="artifact-explore btn" href="https://tecknow-shaman-shop.fourthwall.com">EXPLORE ALL ARTIFACTS →</a>
 </div>
+<article class="panel artifact-product cymalith-feature">
+<img class="product-image" src="cymalith/cymalith-preview.webp" alt="Cymalith editor with synchronized lyrics and an audio visualizer over artwork" width="1263" height="589" loading="lazy">
+<div class="product-copy">
+<div class="section-label">Free creative software</div>
+<h3>Cymalith</h3>
+<p class="cymalith-tagline">Sound Into Motion</p>
+<p>Turn music, artwork, and synchronized lyrics into cinematic music videos. Cymalith is free Windows software for creators, with no subscription required.</p>
+<div class="product-actions"><a class="btn" href="/cymalith/">Explore Cymalith</a></div>
+</div>
+</article>
 <div class="panel storefront-item book-feature" id="bones"><img class="book-art book-cover" src="assets/bones-beneath-the-story.png" alt="Bones Beneath the Story cover" width="675" height="982" loading="lazy"><div class="book-copy"><div class="section-label">Book of Bones</div><h2>Bones Beneath the Story</h2><p>Parables and philosophical artifacts for keeping the story attached to the world.</p><div class="quote">What happens when the friction between an idea and a physical artifact collapses?</div><a class="btn" href="https://shawngilbert.com" target="_blank" rel="noopener">Book status at ShawnGilbert.com ↗</a></div></div>
 <div class="panel storefront-item eid-feature" id="eidomancer"><div class="eid-copy"><div class="section-label">Eidomancer</div><h2>Intelligence, refracted.</h2><p>Eidomancer is not the AI. It is a <span class="gold">philosophy meme lens</span> the AI can inhabit.</p><a class="btn" href="https://eidomancer.com" target="_blank" rel="noopener">Explore Eidomancer ↗</a></div></div>
 </div></div></section>

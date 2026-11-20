@@ -10,6 +10,23 @@
 :root{color-scheme:dark;--bg:#070806;--panel:#0e100e;--bone:#f2ead7;--muted:#c4bdae;--gold:#efc56d;--cyan:#35d8e8;--line:#4a3c24}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--bone);font:16px/1.65 Inter,system-ui,sans-serif}a{color:var(--gold);text-underline-offset:.2em}a:focus-visible{outline:2px solid var(--cyan);outline-offset:5px}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}header,footer{border-bottom:1px solid var(--line);padding:20px 0}.brand{font-weight:800;text-decoration:none;color:var(--bone)}.sigil{display:inline-grid;place-items:center;width:38px;height:38px;border:1px solid var(--gold);color:var(--gold);margin-right:12px;font-size:12px}.hero{padding:64px 0 38px;background:radial-gradient(ellipse at 90% 25%,#102322,transparent 55%)}h1,h2{font-family:Georgia,serif;line-height:1.1}h1{font-size:clamp(3.5rem,9vw,7rem);letter-spacing:-.05em;margin:0}.tagline{font:clamp(1.5rem,3vw,2rem)/1.2 Georgia,serif;color:var(--gold);margin:.25em 0 1em}h2{font-size:clamp(1.65rem,3vw,2.25rem);margin:0 0 .7em}p,li{color:var(--muted)}.intro{max-width:630px;font-size:1.08rem}.download{display:inline-block;background:var(--gold);color:#171009;padding:.8rem 1.15rem;font-weight:800;border-radius:.25rem;text-decoration:none}.download[aria-disabled="true"]{cursor:default;opacity:.8}.download-options{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem 1rem}.support{font-size:.88rem;margin:.65rem 0 0}.support a{color:var(--muted);font-weight:600}.support a:hover{color:var(--gold)}.meta{font-size:.86rem;margin:.7rem 0 0}.details{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding:40px 0 55px}.details section{border-top:1px solid var(--line);padding-top:22px}ul,ol{padding-left:1.3em}footer{border-top:1px solid var(--line);border-bottom:0}@media(max-width:650px){.details{grid-template-columns:1fr;gap:18px}.hero{padding-top:44px}}
 </style>
+<script>
+/* Analytics opt-out for site maintainers: visit any page with ?analytics=off.
+   To re-enable on this browser, visit with ?analytics=on. No cookies or IDs. */
+(function () {
+  try {
+    var flag = new URLSearchParams(location.search).get('analytics');
+    if (flag === 'off') localStorage.setItem('ts_analytics_off', '1');
+    if (flag === 'on') localStorage.removeItem('ts_analytics_off');
+    if (localStorage.getItem('ts_analytics_off') === '1') return;
+  } catch (e) { /* Private browsing may block storage; continue without it. */ }
+  var beacon = document.createElement('script');
+  beacon.type = 'module';
+  beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.setAttribute('data-cf-beacon', JSON.stringify({token:'12f1244270cd488e834baf0c022c6c12'}));
+  document.head.appendChild(beacon);
+}());
+</script>
 </head>
 <body>
 <header><div class="wrap"><a class="brand" href="/"><span class="sigil" aria-hidden="true">TS</span>Tecknow Shaman</a></div></header>

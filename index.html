@@ -218,6 +218,23 @@ section{padding:100px 0}
 @media(max-width:850px){header .navlinks{display:flex}header .navlinks a:not(.cymalith-nav){display:none}header .navlinks .cymalith-nav{display:inline-flex;align-items:center;min-height:44px}header nav{gap:12px}}
 @media(max-width:650px){#merch .cymalith-feature{grid-template-columns:minmax(0,1fr)}}
 </style>
+<script>
+/* Analytics opt-out for site maintainers: visit any page with ?analytics=off.
+   To re-enable on this browser, visit with ?analytics=on. No cookies or IDs. */
+(function () {
+  try {
+    var flag = new URLSearchParams(location.search).get('analytics');
+    if (flag === 'off') localStorage.setItem('ts_analytics_off', '1');
+    if (flag === 'on') localStorage.removeItem('ts_analytics_off');
+    if (localStorage.getItem('ts_analytics_off') === '1') return;
+  } catch (e) { /* Private browsing may block storage; continue without it. */ }
+  var beacon = document.createElement('script');
+  beacon.type = 'module';
+  beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.setAttribute('data-cf-beacon', JSON.stringify({token:'12f1244270cd488e834baf0c022c6c12'}));
+  document.head.appendChild(beacon);
+}());
+</script>
 </head>
 <body id="top">
 <header><div class="wrap"><nav>
